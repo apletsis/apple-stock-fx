@@ -58,7 +58,6 @@ const Header = ({ classes, handleLoading }) => {
     : '';
   const positiveChange = response.change > 0;
   const zeroChange = response.change === 0;
-  console.log(response.change)
 
   return (
     <Fragment>
