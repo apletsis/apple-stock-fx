@@ -11,7 +11,7 @@ const TabsComponent = ({ classes }) => {
   const [tab, setTab] = useState(0);
   const [data, setData] = useState([])
   const [timeFrame, setTimeFrame] = useState({
-    units: 'Hours', amount: '168', label: '1 Week'
+    units: 'Minutes', amount: '1', label: '1 Minute'
   })
 
   const fetchApiData = useCallback(async () => {
