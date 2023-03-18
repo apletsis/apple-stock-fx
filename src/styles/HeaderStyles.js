@@ -1,8 +1,8 @@
 export const styles = {
   headerMainGrid: {
-    backgroundColor: "rgb(255, 255, 255)",
-    padding: "16px 21px",
-    boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 6px 0px",
+    backgroundColor: 'rgb(255, 255, 255)',
+    padding: '16px 21px',
+    boxShadow: 'rgba(0, 0, 0, 0.16) 0px 1px 6px 0px',
     marginBottom: 10
   },
   headerBrandName: {

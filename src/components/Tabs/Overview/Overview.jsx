@@ -27,12 +27,12 @@ export const Overview = ({ data, xAxisDisplayBy }) => {
           }}
         >
           <defs>
-            <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#97beef" stopOpacity={0.8} />
-              <stop offset="95%" stopColor="#97beef" stopOpacity={0} />
+            <linearGradient id='colorUv' x1='0' y1='0' x2='0' y2='1'>
+              <stop offset='5%' stopColor='#97beef' stopOpacity={0.8} />
+              <stop offset='95%' stopColor='#97beef' stopOpacity={0} />
             </linearGradient>
           </defs>
-          <XAxis dataKey={xAxisDisplayBy === 'date' ? 'Date' : 'Time'} axisLine="false" tickLine="false" tickMargin={5} fontSize={12} />
+          <XAxis dataKey={xAxisDisplayBy === 'date' ? 'Date' : 'Time'} axisLine='false' tickLine='false' tickMargin={5} fontSize={12} />
           <YAxis
             dataKey='Close'
             domain={['dataMin', 'dataMax']}
@@ -42,7 +42,7 @@ export const Overview = ({ data, xAxisDisplayBy }) => {
             fontSize={13}
           />
           <Tooltip />
-          <Area type="monotone" dataKey="Close" stroke="#419bf9" fillOpacity={1} fill="url(#colorUv)" />
+          <Area type='monotone' dataKey='Close' stroke='#419bf9' fillOpacity={1} fill='url(#colorUv)' />
         </AreaChart>
       </ResponsiveContainer>
     </div>

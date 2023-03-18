@@ -5,12 +5,13 @@ import TimeFrameSelectors from './TimeFrameSelectors/TimeFrameSelectors';
 import { getPricesFromAPI } from '../../helpers/api';
 import { TabPanel } from './TabPanel';
 import { styles } from '../../styles/TabsStyles';
+import History from './History/History';
 
 const TabsComponent = ({ classes }) => {
   const [tab, setTab] = useState(0);
   const [data, setData] = useState([])
   const [timeFrame, setTimeFrame] = useState({
-    units: "Minutes", amount: "1", label: "1 Minute"
+    units: 'Hours', amount: '168', label: '1 Week'
   })
 
   const fetchApiData = useCallback(async () => {
@@ -38,8 +39,8 @@ const TabsComponent = ({ classes }) => {
   return (
     <div>
       <Tabs value={tab} onChange={handleChange} classes={{ root: classes.tabsRoot, indicator: classes.tabsIndicator }}>
-        <Tab label="Overview" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} disableRipple />
-        <Tab label="History" classes={{ root: classes.tabRoot, selected: classes.tabSelected }} disableRipple />
+        <Tab label='Overview' classes={{ root: classes.tabRoot, selected: classes.tabSelected }} disableRipple />
+        <Tab label='History' classes={{ root: classes.tabRoot, selected: classes.tabSelected }} disableRipple />
       </Tabs>
       <TimeFrameSelectors timeFrame={timeFrame} setTimeFrame={setTimeFrame} />
       <TabPanel value={tab} index={0}>
@@ -49,7 +50,7 @@ const TabsComponent = ({ classes }) => {
         />
       </TabPanel>
       <TabPanel value={tab} index={1}>
-        Item Two
+        <History data={data} />
       </TabPanel>
     </div>
   );

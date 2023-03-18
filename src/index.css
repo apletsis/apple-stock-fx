@@ -5,6 +5,7 @@ html, body {
 #root {
   width: 100%;
   height: 100vh;
+  margin: auto;
 }
 
 body {
@@ -19,4 +20,16 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.BaseTable__row-cell-text {
+  font-weight: 500;
+}
+
+.BaseTable__row-cell-text.green {
+  color: rgb(80, 126, 17);
+}
+
+.BaseTable__row-cell-text.red {
+  color: rgb(217, 30, 24);
 }

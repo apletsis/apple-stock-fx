@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export default function Badge(response) {
   const positiveChange = response.change > 0;
@@ -10,15 +10,15 @@ export default function Badge(response) {
       transform: `rotate(${!positiveChange ? '180deg' : 0})`
     }} >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16px"
-        height="16px"
-        viewBox="0 0 16 16"
+        xmlns='http://www.w3.org/2000/svg'
+        width='16px'
+        height='16px'
+        viewBox='0 0 16 16'
       >
         <polygon
           fill={badgeColor}
-          points="8,2 0,16 16,16"
-          data-testid="direction_polygon"
+          points='8,2 0,16 16,16'
+          data-testid='direction_polygon'
         >
         </polygon>
       </svg>

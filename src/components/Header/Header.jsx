@@ -31,13 +31,13 @@ const Header = ({ classes, handleLoading }) => {
   const connect = useCallback(() => {
     const unSubscribeMessage = {
       type: 'UNSUBSCRIBE',
-      instruments: ["s-aapl"],
+      instruments: ['s-aapl'],
     };
     sendJsonMessage(unSubscribeMessage);
 
     const subscribeMessage = {
       type: 'SUBSCRIBE',
-      instruments: ["s-aapl"],
+      instruments: ['s-aapl'],
     };
     sendJsonMessage(subscribeMessage);
   }, [sendJsonMessage])
